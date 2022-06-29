@@ -1,0 +1,20 @@
+--Create a bicycle store database
+
+CREATE TABLE store (id INTEGER PRIMARY KEY, item TEXT, quantity INTEGER, price REAL);
+
+INSERT INTO store VALUES
+(1, "Red Bike", 3, 50),
+(2, "Blue Bike", 4, 55),
+(3, "Yellow Bike", 3, 75),
+(4, "Pink Bike", 6,  55),
+(5, "Green Bike", 2, 60)
+;
+
+--General overeview table
+SELECT * FROM store;
+
+--What is the total inventory?
+SELECT SUM(quantity) FROM store;
+
+--Which have the higher sticker price?
+SELECT * FROM store ORDER BY price desc; 
